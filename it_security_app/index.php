@@ -60,6 +60,18 @@
             font-size: 16px;
             margin: 10px 0;
         }
+		
+        .signature {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .signature div {
+            width: 30%;
+            text-align: center;
+            border-top: 1px solid black;
+            padding-top: 5px;
+        }
     </style>
     <script>
         function openModal(modalId) {
@@ -154,15 +166,77 @@
     <div id="detailsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('detailsModal')">&times;</span>
-            <h2>事件詳情</h2>
+            <h1>1.1 Event ID Form Provided by TW</h1>
+			<p class="attention">Pay attention: This document needs to be completed and signed back</p>
+
+			<h2>事件詳情</h2>
             <p><strong>事件ID:</strong> <span id="details-id"></span></p>
             <p><strong>使用者:</strong> <span id="details-user_id"></span></p>
             <p><strong>處理人員:</strong> <span id="details-scanby_id"></span></p>
             <p><strong>事件處理狀態:</strong> <span id="details-status"></span></p>
-            <h3>簽名區</h3>
-            <p>處理人員: <span id="details-scanby_signature"></span></p>
-            <p>使用者: <span id="details-user_signature"></span></p>
-            <p>資安主管: Neil</p>
+            
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>M</th>
+                <th>Event Handling Items</th>
+                <th>Completion Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>T1</td>
+                <td></td>
+                <td>Start of Event ID record form. (Start)<br>1. Perform tasks assigned by supervisor.</td>
+                <td>2025 - __ - __ </td>
+            </tr>
+            <tr>
+                <td>T2</td>
+                <td>M1</td>
+                <td>Isolation and damage control measures.<br>1. Disconnect from the network.<br>2. Remove the hard drive.</td>
+                <td>Troubleshooting</td>
+            </tr>
+            <tr>
+                <td>T3</td>
+                <td></td>
+                <td>Cleanup and recovery process.<br>1. Kaspersky (Safe mode)<br>2. McAfee (Safe mode)</td>
+                <td>Troubleshooting</td>
+            </tr>
+            <tr>
+                <td>T4</td>
+                <td>M2</td>
+                <td>Notify user comes to IT transfer data to NAS Backup.<br>1. Provide backup environment for User or Supervisor.<br>2. Notify User comes to IT transfer data to NAS backup.</td>
+                <td>Troubleshooting</td>
+            </tr>
+            <tr>
+                <td>T5</td>
+                <td>M3</td>
+                <td>Re-install return PC.<br>1. Complete computer settings and go to site.</td>
+                <td>Troubleshooting</td>
+            </tr>
+            <tr>
+                <td>T6</td>
+                <td></td>
+                <td>Close ID Event form.<br>1. Event ID form completed and signed off.</td>
+                <td>Supervisor</td>
+            </tr>
+        </tbody>
+    </table>
+	<div class="signature">
+            <br><div>Troubleshooting by:<br><br><br><span id="details-scanby_signature"></span></div>
+            <br><div>Event by:<br><br><br><span id="details-user_signature"></span></div>
+            <br><div>Received by:<br><br><br>資安主管: Neil</div>
+    </div>
+		
+    <div class="signature">
+		<div>SIGNED</div>
+		<div>SIGNED</div>
+		<div>SIGNED</div>
+    </div>
+    
+	</div>
+            
         </div>
     </div>
 
